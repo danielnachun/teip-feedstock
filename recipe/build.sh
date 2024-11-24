@@ -14,6 +14,7 @@ cargo-bundle-licenses \
 # build statically linked binary with Rust
 export RUSTONIG_DYNAMIC_LIBONIG=1
 export RUSTONIG_SYSTEM_LIBONIG=1
+export PKG_CONFIG_PATH=${PREFIX}/lib/pkg-config
 cargo install --bins --features oniguruma --no-track --locked --root ${PREFIX} --path .
 
 mkdir -p ${PREFIX}/share/man/man1
